@@ -1,0 +1,64 @@
+/*==================================================
+  Assignment #2 Milestone #4
+  ==================================================
+  Name    : Mann Patel
+  ID      : 134633205
+  Email   : mpatel394@myseneca.ca
+  Section : NEE
+  */
+
+
+
+1. There are plenty of functions that I created while performing this assignment. All of them helped me to organize my code into an understable 
+     and readable format. I placed all the functions in their respected modules. Following are the modules that were included in this assignment : 
+     a) commonHelpers.h : void checkSpacesUserLogin(struct UserLogin* user_login); 
+                                              (also I modified some of the helper functions to use the functions available from the string library)
+
+     b) account.h :  int loadAccounts(struct Account acc[], int size);
+                                int archiveRemovedAccount(const struct Account* acc);
+                                int saveCurrentAccounts(const struct Account acc[], int size);
+
+     c) ticket.h :      int findTicketIndex(int tic_num, const struct Ticket tic[], int size, int input_ticket_num);
+                               int removeTickets(const struct AccountTicketingData* acc_tic, struct Account* acc, int* removed_tickets)                 
+                               void addTicket(struct Ticket* newCustTic, const struct Account* acc, int size);
+                               void updateCustTic(struct Ticket* newCustTic, struct Account* acc, int size);
+                               void custTicketUpdate(struct Ticket* tic, struct Account* acc);
+                               void displayAgentTicketMessage(const struct AccountTicketingData* agent_tic);
+                               void modifyAgentTicket(const struct AccountTicketingData* agent_tic, struct Account* acc);
+                               void menuAgentTicketModification(struct Ticket* tic, struct Account* acc);
+                               int loadTickets(struct Ticket tic[], int size);
+                               int saveTickets(const struct Ticket tic[], int size);
+                               int archiveRemovedTickets(const struct Ticket* tic);
+                               void archiveClosedTickets(const struct Ticket* tic);
+
+    d) accountTicketingUI.h :  void displayTicketHeader(void);
+                               void displayNewMessage(const struct AccountTicketingData* newTic);
+                               void displayActiveMessage(const struct AccountTicketingData* newTic);
+                               void displayCustHeader(void);
+                               void displayCustMessage(const struct Ticket* tickets, const struct Account* accountInfo, int size);
+                               void customerMenu(struct Ticket* tic, struct Account* acc, int size);
+
+
+2. This entire assignment was quite challenging for me because each milestone asked for some complicated changes in the previous code. Though,
+     there were some features of this assignment which I found enjoyable and exciting while developing them. One of them was the functionality
+     of menuAgent function. This functions worked as a cascading menu which displays sub-options when we entered the appropriate input. This function
+     typically worked as a professional agent account ticket system application by displaying numerous choices that an agent can choose from and 
+     apply the necessary changes to the accounts and tickets. I have seen many applications that worked exactly the same way as menuAgent. I am not
+     going to deny the fact that I did face difficulties while writing the code for this but at the end when I finished it, it gave me a sense of pride. It felt
+     like using a professional account ticketing system application with varied features. Another feature that was quite interesting for me was 
+     validating password strength. All the symbols that are required to have a secured password in modern day applications were used in this
+     part. After the lecture, I was not very comfortable with using the ctype library functions but after I completed the validation part for password
+     I am a bit sure that those functions are now stiffed in my brain. At last, these features gave me a basic idea and code behind working of complex
+     account ticketing system application.
+
+
+3. There were many instances in this assignment where I was stuck at one point for hours. Specifically, there were two features which I found the 
+     most difficult to crack. One of them was accessing data from account.txt and tickets.txt files. At first, I was not at all confident about my 
+     understanding of files. That is because due to unavoidable circumstances I missed half of the lecture. I reviewed it and got a bit of concept. But,
+     when I applied it into practice, the program was unable to open the files and access the data from it. And because of that I had to delete the files 
+     from project location and add them again. I did the whole process about 7 to 8 times until I was successful in it. Another thing that I disliked
+     about this assignment was the part where when the user selects option 8 and the program displays closed tickets but in my case it displayed
+     both active and closed and all zeroes in place of account numbers. I supposed that it would be a major error but after about 4 to 5 hours of 
+     analyzing the code for that part I reliased that I was initialising ticket indicator status to be 1 in if loop and therefore I was getting wrong 
+     output. But overall, this assignment taught me a lot concepts that were unclear before I completed all the milestones. 
+     
